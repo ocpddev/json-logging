@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "logging.json",
+      "type": "dev.ocpd.spring.logging.json.JsonLoggingInitializer"
+    }
+  ],
+  "properties": [
+    {
+      "name": "logging.json.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable json logging.",
+      "sourceType": "dev.ocpd.spring.logging.json.JsonLoggingInitializer",
+      "defaultValue": false
+    }
+  ]
+}
