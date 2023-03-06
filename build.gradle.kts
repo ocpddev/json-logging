@@ -1,11 +1,12 @@
+import org.jetbrains.kotlin.gradle.plugin.getKotlinPluginVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("io.spring.dependency-management") version "1.1.0"
-    kotlin("jvm") version "1.7.10"
-    kotlin("kapt") version "1.7.10"
-    kotlin("plugin.spring") version "1.7.10"
+    kotlin("jvm") version "1.7.21"
+    kotlin("kapt") version "1.7.21"
+    kotlin("plugin.spring") version "1.7.21"
     id("org.jetbrains.dokka") version "1.7.20"
+    id("io.spring.dependency-management") version "1.1.0"
     `maven-publish`
     signing
 }
@@ -42,12 +43,14 @@ dependencyManagement {
     imports { mavenBom("org.springframework.boot:spring-boot-dependencies:2.7.9") }
 }
 
+extra["kotlin.version"] = getKotlinPluginVersion()
+
 dependencies {
     kapt("org.springframework.boot:spring-boot-configuration-processor")
 
     api("org.springframework.boot:spring-boot-starter")
     api("org.springframework.boot:spring-boot-starter-logging")
-    api("net.logstash.logback:logstash-logback-encoder:7.1.1")
+    api("net.logstash.logback:logstash-logback-encoder:7.3")
     implementation(kotlin("stdlib-jdk8"))
 
     testImplementation(kotlin("reflect"))
