@@ -63,7 +63,7 @@ publishing {
             from(components["java"])
             pom {
                 name.set("spring-boot-logging-json")
-                description.set("Spring boot logging json extension")
+                description.set("Spring Boot JSON logging support")
                 url.set("https://github.com/ocpddev/spring-boot-json-logging")
                 licenses {
                     license {

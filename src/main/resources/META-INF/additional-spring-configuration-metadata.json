@@ -9,7 +9,7 @@
     {
       "name": "logging.json.enabled",
       "type": "java.lang.Boolean",
-      "description": "Enable json logging.",
+      "description": "Enable JSON logging.",
       "sourceType": "dev.ocpd.spring.logging.json.JsonLoggingInitializer",
       "defaultValue": false
     }
