@@ -5,7 +5,7 @@ plugins {
     kotlin("jvm") version "1.7.21"
     kotlin("kapt") version "1.7.21"
     kotlin("plugin.spring") version "1.7.21"
-    id("org.jetbrains.dokka") version "1.7.20"
+    id("org.jetbrains.dokka") version "1.8.20"
     id("io.spring.dependency-management") version "1.1.0"
     `maven-publish`
     signing
