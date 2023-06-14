@@ -40,7 +40,7 @@ repositories {
 }
 
 dependencyManagement {
-    imports { mavenBom("org.springframework.boot:spring-boot-dependencies:2.7.9") }
+    imports { mavenBom("org.springframework.boot:spring-boot-dependencies:3.1.0") }
 }
 
 extra["kotlin.version"] = getKotlinPluginVersion()
