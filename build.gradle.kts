@@ -1,5 +1,6 @@
 import org.jetbrains.kotlin.gradle.plugin.getKotlinPluginVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
     alias(libs.plugins.jvm)
@@ -23,6 +24,10 @@ java {
 
 tasks.named<Jar>("javadocJar") {
     from(tasks.named("dokkaJavadoc"))
+}
+
+tasks.named<BootJar>("bootJar") {
+    enabled = false
 }
 
 tasks.withType<KotlinCompile> {
