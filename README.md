@@ -1,4 +1,4 @@
-# spring-boot-logging-json
+# json-logging
 
 JSON logging support for Spring Boot.
 
@@ -14,4 +14,4 @@ fun main(args: Array<String>) {
 
 ## License
 
-spring-boot-logging-json is licensed under [Apache License, Version 2.0](LICENSE).
+json-logging is licensed under [Apache License, Version 2.0](LICENSE).
