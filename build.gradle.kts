@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.plugin.getKotlinPluginVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.7.21"
+    kotlin("jvm") version "1.8.22"
     kotlin("kapt") version "1.7.21"
     kotlin("plugin.spring") version "1.7.21"
     id("org.jetbrains.dokka") version "1.7.20"
