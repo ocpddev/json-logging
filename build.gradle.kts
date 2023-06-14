@@ -62,9 +62,9 @@ publishing {
         create<MavenPublication>("maven") {
             from(components["java"])
             pom {
-                name.set("spring-boot-logging-json")
+                name.set("json-logging")
                 description.set("Spring Boot JSON logging support")
-                url.set("https://github.com/ocpddev/spring-boot-json-logging")
+                url.set("https://github.com/ocpddev/json-logging")
                 licenses {
                     license {
                         name.set("The Apache License, Version 2.0")
@@ -72,7 +72,7 @@ publishing {
                     }
                 }
                 scm {
-                    url.set("https://github.com/ocpddev/spring-boot-json-logging")
+                    url.set("https://github.com/ocpddev/json-logging")
                 }
                 developers {
                     developer {

@@ -1,1 +1,1 @@
-rootProject.name = "spring-boot-logging-json"
+rootProject.name = "json-logging"
