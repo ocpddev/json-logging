@@ -1,13 +1,12 @@
 import org.jetbrains.kotlin.gradle.plugin.getKotlinPluginVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
     alias(libs.plugins.jvm)
     alias(libs.plugins.kapt)
     alias(libs.plugins.dokka)
     alias(libs.plugins.kotlin.spring)
-    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.boot) apply false
     alias(libs.plugins.spring.dependency.management)
     `maven-publish`
     signing
@@ -24,10 +23,6 @@ java {
 
 tasks.named<Jar>("javadocJar") {
     from(tasks.named("dokkaJavadoc"))
-}
-
-tasks.named<BootJar>("bootJar") {
-    enabled = false
 }
 
 tasks.withType<KotlinCompile> {
