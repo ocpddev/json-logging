@@ -6,7 +6,7 @@ plugins {
     alias(libs.plugins.kapt)
     alias(libs.plugins.dokka)
     alias(libs.plugins.kotlin.spring)
-    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.boot) apply false
     alias(libs.plugins.spring.dependency.management)
     `maven-publish`
     signing
