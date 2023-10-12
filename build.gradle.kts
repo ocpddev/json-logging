@@ -64,23 +64,23 @@ publishing {
         create<MavenPublication>("maven") {
             from(components["java"])
             pom {
-                name.set("json-logging")
-                description.set("Spring Boot JSON logging support")
-                url.set("https://github.com/ocpddev/json-logging")
+                name = "json-logging"
+                description = "Spring Boot JSON logging support"
+                url = "https://github.com/ocpddev/json-logging"
                 licenses {
                     license {
-                        name.set("The Apache License, Version 2.0")
-                        url.set("https://www.apache.org/licenses/LICENSE-2.0.txt")
+                        name = "The Apache License, Version 2.0"
+                        url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
                     }
                 }
                 scm {
-                    url.set("https://github.com/ocpddev/json-logging")
+                    url = "https://github.com/ocpddev/json-logging"
                 }
                 developers {
                     developer {
-                        id.set("sola")
-                        name.set("Sola")
-                        email.set("sola@ocpd.dev")
+                        id = "sola"
+                        name = "Sola"
+                        email = "sola@ocpd.dev"
                     }
                 }
             }
