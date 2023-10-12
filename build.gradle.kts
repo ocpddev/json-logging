@@ -23,6 +23,7 @@ java {
 
 tasks.named<Jar>("javadocJar") {
     from(tasks.named("dokkaJavadoc"))
+    duplicatesStrategy = DuplicatesStrategy.WARN
 }
 
 kotlin {
