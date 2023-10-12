@@ -1,5 +1,4 @@
 import org.jetbrains.kotlin.gradle.plugin.getKotlinPluginVersion
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     alias(libs.plugins.jvm)
@@ -15,8 +14,9 @@ plugins {
 group = "dev.ocpd.spring"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
     withSourcesJar()
     withJavadocJar()
 }
@@ -25,10 +25,10 @@ tasks.named<Jar>("javadocJar") {
     from(tasks.named("dokkaJavadoc"))
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
+kotlin {
+    jvmToolchain(17)
+    compilerOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=all")
-        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 
