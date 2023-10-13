@@ -1,5 +1,4 @@
 import org.jetbrains.kotlin.gradle.plugin.getKotlinPluginVersion
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     alias(libs.plugins.jvm)
@@ -15,8 +14,6 @@ plugins {
 group = "dev.ocpd.spring"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
     withSourcesJar()
     withJavadocJar()
 }
@@ -25,10 +22,10 @@ tasks.named<Jar>("javadocJar") {
     from(tasks.named("dokkaJavadoc"))
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
+kotlin {
+    jvmToolchain(17)
+    compilerOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=all")
-        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 
@@ -64,23 +61,23 @@ publishing {
         create<MavenPublication>("maven") {
             from(components["java"])
             pom {
-                name.set("json-logging")
-                description.set("Spring Boot JSON logging support")
-                url.set("https://github.com/ocpddev/json-logging")
+                name = "json-logging"
+                description = "Spring Boot JSON logging support"
+                url = "https://github.com/ocpddev/json-logging"
                 licenses {
                     license {
-                        name.set("The Apache License, Version 2.0")
-                        url.set("https://www.apache.org/licenses/LICENSE-2.0.txt")
+                        name = "The Apache License, Version 2.0"
+                        url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
                     }
                 }
                 scm {
-                    url.set("https://github.com/ocpddev/json-logging")
+                    url = "https://github.com/ocpddev/json-logging"
                 }
                 developers {
                     developer {
-                        id.set("sola")
-                        name.set("Sola")
-                        email.set("sola@ocpd.dev")
+                        id = "sola"
+                        name = "Sola"
+                        email = "sola@ocpd.dev"
                     }
                 }
             }
