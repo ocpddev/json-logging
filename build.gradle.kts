@@ -14,9 +14,6 @@ plugins {
 group = "dev.ocpd.spring"
 
 java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
     withSourcesJar()
     withJavadocJar()
 }
