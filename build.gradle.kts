@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.plugin.getKotlinPluginVersion
+import org.springframework.boot.gradle.plugin.SpringBootPlugin
 
 plugins {
     alias(libs.plugins.jvm)
@@ -23,7 +24,7 @@ tasks.named<Jar>("javadocJar") {
 }
 
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(21)
     compilerOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=all")
     }
@@ -38,7 +39,7 @@ repositories {
 }
 
 dependencyManagement {
-    imports { mavenBom(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES) }
+    imports { mavenBom(SpringBootPlugin.BOM_COORDINATES) }
 }
 
 extra["kotlin.version"] = getKotlinPluginVersion()
