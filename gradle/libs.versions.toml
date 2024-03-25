@@ -6,7 +6,7 @@ jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 dokka = { id = "org.jetbrains.dokka", version = "1.9.20" }
 kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
-spring-boot = { id = "org.springframework.boot", version = "3.2.3" }
+spring-boot = { id = "org.springframework.boot", version = "3.2.4" }
 spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.4" }
 
 [libraries]
